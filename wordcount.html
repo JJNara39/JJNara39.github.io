@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Wordcount</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Featured Post -->
+							<article class="post featured">
+							
+							</article>
+
+<h1>WORD COUNT</h1>
+		<center>This wordcounter was created to run in django, which can be found <a href = "https://github.com/JJNara39/wordcount-project"> here. </a> <br>
+		But since this page is a new version of me (post-certificate), there should be a new version of this.</br></center>
+		<div style="text-align: center;">
+			<textarea id="textcontent" style="width: 455px; height: 200px;"></textarea>
+			<div id="countWord"></div>
+		 </div>
+		 <script>
+			 function count_word( val ){
+    		var wom = val.match(/\S+/g);
+    		return {
+       		 words : wom ? wom.length : 0
+    		};
+		}
+			var textContent = document.getElementById("textcontent");
+			var showWordCount   = document.getElementById("countWord");
+			textContent.addEventListener("input", function(){
+  			var v = count_word( this.value );
+  			showWordCount.innerHTML = (
+      			"<br>Words: "+ v.words
+  			);
+			}, false);
+		 </script>
+		<center> This wordcounter is live, built with Javascript. It will count your words as you type them in.</center>
+<form action="index.html">
+  <input type="submit" value="About">
+  </form>
+                            
+				<!-- Footer -->
+					<footer id="footer">
+						<section class="split contact">
+							<section>
+								<h3>Phone</h3>
+								<p>(719) 368-1778</p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p>jjnara39@gmail.com</p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="https://www.linkedin.com/jacob-jackson-b6119a103" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a href="https://github.com/JJNara39/JJNara39" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
